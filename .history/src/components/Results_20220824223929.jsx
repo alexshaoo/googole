@@ -9,8 +9,6 @@ export const Results = () => {
   const { results, loading, searchTerm, getResults, setSearchTerm } = useResultContext();
   const location = useLocation();
 
-  loading = true;
-
   if (loading) return <Loading />;
 
 
