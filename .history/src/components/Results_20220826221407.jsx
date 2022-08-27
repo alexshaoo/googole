@@ -14,13 +14,7 @@ export const Results = () => {
   switch (location.pathname) {
     case "/search":
       return "SEARCH RESULTS"
-    case "/images":
-      return "IMAGE RESULTS"
-    case "/news":
-      return "NEWS RESULTS"
-    case "/videos":
-      return "VIDEO RESULTS"
     default:
-      return "THE WEB PAGE YOU ARE LOOKING FOR DOES NOT EXIST"
+      return "WTF"
   }
 }

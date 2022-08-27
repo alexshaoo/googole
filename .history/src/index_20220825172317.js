@@ -10,10 +10,10 @@ import { ResultProvider } from './contexts/ResultContext';
 const root = ReactDOMClient.createRoot(document.getElementById('root'));
 root.render(
   <ResultProvider>
-    <StrictMode>
-      <Router>
-        <App />
-      </Router>
-    </StrictMode>
+  <StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </StrictMode>
   </ResultProvider>
 );

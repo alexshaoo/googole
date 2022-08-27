@@ -15,12 +15,12 @@ export const Results = () => {
     case "/search":
       return "SEARCH RESULTS"
     case "/images":
-      return "IMAGE RESULTS"
+      return "SEARCH RESULTS"
     case "/news":
-      return "NEWS RESULTS"
+      return "SEARCH RESULTS"
     case "/videos":
       return "VIDEO RESULTS"
     default:
-      return "THE WEB PAGE YOU ARE LOOKING FOR DOES NOT EXIST"
+      return "WTF"
   }
 }

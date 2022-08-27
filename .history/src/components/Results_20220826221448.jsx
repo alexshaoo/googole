@@ -21,6 +21,6 @@ export const Results = () => {
     case "/videos":
       return "VIDEO RESULTS"
     default:
-      return "THE WEB PAGE YOU ARE LOOKING FOR DOES NOT EXIST"
+      return "THE WEB PAGE "
   }
 }
