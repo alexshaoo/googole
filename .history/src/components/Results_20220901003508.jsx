@@ -30,11 +30,8 @@ export const Results = () => {
           {results?.results?.map(({ link, title }, index) => (
             <div key={index} className="md:w-2/5 w-full">
               <a href={link} target="_blank" rel="noreferrer">
-                <p className="text-sm">
-                  {link.length > 50 ? `${link.substring(0, 50)}...` : link}
-                </p>
-                <p className="text-lg hover:underline dark:text-blue-300 text-blue-700">
-                  {title.length > 50 ? `${title.substring(0, 50)}...` : title}
+                <p>
+                  {}
                 </p>
               </a>
             </div>

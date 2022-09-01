@@ -34,7 +34,7 @@ export const Results = () => {
                   {link.length > 50 ? `${link.substring(0, 50)}...` : link}
                 </p>
                 <p className="text-lg hover:underline dark:text-blue-300 text-blue-700">
-                  {title.length > 50 ? `${title.substring(0, 50)}...` : title}
+                  {title}
                 </p>
               </a>
             </div>
