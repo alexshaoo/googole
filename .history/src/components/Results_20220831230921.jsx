@@ -9,18 +9,6 @@ export const Results = () => {
   const { results, loading, searchTerm, getResults, setSearchTerm } = useResults();
   const location = useLocation();
 
-  // useEffect(() => {
-  //   if (location.search) {
-  //     const search = location.search.split('=')[1];
-  //     setSearchTerm(search);
-  //     getResults(search);
-  //   }
-  // } , [location]);
-
-  useEffect(() => {
-    getResults('/search/q=cats');
-  } , []);
-
   if (loading) return <Loading />;
 
   switch (location.pathname) {

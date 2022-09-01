@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const ResultContext = createContext();
-const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
+const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1/';
 
 export const ResultProvider = ({ children }) => {
   const [results, setResults] = useState([]);
@@ -16,7 +16,7 @@ export const ResultProvider = ({ children }) => {
       // TODO: store in environment variable 
       headers: {
         'X-User-Agent': 'desktop',
-        'X-Proxy-Location': 'CA',
+        'X-Proxy-Location': 'EU',
         'X-RapidAPI-Key': 'd703e484f5mshe58b3de201d3feep13f3c5jsnbe2f0cc95217',
         'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
       }

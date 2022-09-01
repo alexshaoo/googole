@@ -17,17 +17,15 @@ export const Results = () => {
   //   }
   // } , [location]);
 
-  useEffect(() => {
-    getResults('/search/q=cats');
-  } , []);
-
   if (loading) return <Loading />;
 
   switch (location.pathname) {
     case "/search":
       return (
         <div className="flex flex-wrap">
-          
+          {/* {results?.results?.map((result, index) => (
+
+          ))} */}
         </div>
       )
     case "/images":

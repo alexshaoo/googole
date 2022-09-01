@@ -27,7 +27,9 @@ export const Results = () => {
     case "/search":
       return (
         <div className="flex flex-wrap">
-          
+          {/* {results?.results?.map((result, index) => (
+
+          ))} */}
         </div>
       )
     case "/images":

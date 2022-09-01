@@ -18,8 +18,7 @@ export const Results = () => {
   // } , [location]);
 
   useEffect(() => {
-    getResults('/search/q=cats');
-  } , []);
+    getResults("/search/q=cats")
 
   if (loading) return <Loading />;
 
@@ -27,7 +26,9 @@ export const Results = () => {
     case "/search":
       return (
         <div className="flex flex-wrap">
-          
+          {/* {results?.results?.map((result, index) => (
+
+          ))} */}
         </div>
       )
     case "/images":
