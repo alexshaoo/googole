@@ -10,7 +10,7 @@ export const Links = () => {
         <Route exact path="/">
           <Redirect to="/search" />
         </Route>
-        <Route path={['/search', '/images', '/news', '/videos']}>
+        <Route path={['/search', '/image', '/news', '/videos']}>
           <Results />
         </Route>
       </Routes>

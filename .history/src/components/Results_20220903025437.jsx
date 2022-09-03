@@ -19,8 +19,7 @@ export const Results = () => {
 
   useEffect(() => {
     if (searchTerm) {
-      getResults(`${location.pathname}/q=${searchTerm}`);
-    }
+    getResults(`${location.pathname}/q=${searchTerm}`);
   } , [searchTerm, location.pathname]);
 
   if (loading) return <Loading />;
@@ -43,7 +42,7 @@ export const Results = () => {
           ))}
         </div>
       )
-    case "/image":
+    case "/images":
       return (
         <div className="flex flex-wrap justify-center items-center">
           {results?.image_results?.map(({ image, link: { href, title } }, index) => (

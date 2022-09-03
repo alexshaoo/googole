@@ -18,10 +18,8 @@ export const Results = () => {
   // } , [location]);
 
   useEffect(() => {
-    if (searchTerm) {
-      getResults(`${location.pathname}/q=${searchTerm}`);
-    }
-  } , [searchTerm, location.pathname]);
+    getResults('/search/q=cats');
+  } , []);
 
   if (loading) return <Loading />;
 
@@ -43,17 +41,13 @@ export const Results = () => {
           ))}
         </div>
       )
-    case "/image":
+    case "/images":
       return (
         <div className="flex flex-wrap justify-center items-center">
           {results?.image_results?.map(({ image, link: { href, title } }, index) => (
-            <a className="sm:p-3 p-5" href={href} key={index} target="_blank" rel="noreferrer">
-              <img src={image?.src} alt={title} loading="lazy" />
-              <p className="w-36 break-words text-sm mt-2">
-                {title}
-              </p>
+            <a className="">
             </a>
-          ))}
+
         </div>
       )
     case "/news":

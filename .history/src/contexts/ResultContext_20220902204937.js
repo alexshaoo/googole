@@ -33,7 +33,7 @@ export const ResultProvider = ({ children }) => {
     <ResultContext.Provider value={{ results, loading, searchTerm, getResults, setSearchTerm }}>
       {children}
     </ResultContext.Provider>
-  );  
+  );
 }
 
 export const useResults = () => useContext(ResultContext);
