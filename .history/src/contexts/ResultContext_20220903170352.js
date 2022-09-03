@@ -24,15 +24,19 @@ export const ResultProvider = ({ children }) => {
 
     const data = await response.json();
 
-    if (url.includes("/search")) {
+    if (data.includes("/search")) {
       setResults(data?.results);
-    } else if (url.includes("/image")) {
-      setResults(data?.image_results);
-    } else if (url.includes("/news")) {
+    } else if (data.includes("/images")) {
+      setResults(data?.images_results);
+    } else if (data.includes("/news")) {
       setResults(data?.entries);
+    } else if (data.includes("/videos")) {
+      setResults(data?.videos_results);
     }
 
+    setResults(data);
     setLoading(false);
+    console.log(data);
   }
 
   return (

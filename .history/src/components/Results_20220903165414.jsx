@@ -9,7 +9,6 @@ export const Results = () => {
   const { results, loading, searchTerm, getResults, setSearchTerm } = useResults();
   const location = useLocation();
 
-
   // useEffect(() => {
   //   if (location.search) {
   //     const search = location.search.split('=')[1];
@@ -30,7 +29,7 @@ export const Results = () => {
     case "/search":
       return (
         <div className="flex flex-wrap">
-          {results?.map(({ link, title }, index) => (
+          {results?.results?.map(({ link, title }, index) => (
             <div key={index} className="md:w-2/5 w-full">
               <a href={link} target="_blank" rel="noreferrer">
                 <p className="text-sm">
@@ -47,7 +46,7 @@ export const Results = () => {
     case "/image":
       return (
         <div className="flex flex-wrap justify-center items-center">
-          {results?.map(({ image, link: { href, title } }, index) => (
+          {results?.image_results?.map(({ image, link: { href, title } }, index) => (
             <a className="sm:p-3 p-5" href={href} key={index} target="_blank" rel="noreferrer">
               <img src={image?.src} alt={title} loading="lazy" />
               <p className="w-36 break-words text-sm mt-2">
@@ -60,16 +59,14 @@ export const Results = () => {
     case "/news":
       return (
         <div className="flex flex-wrap justify-center space-y-6 sm:px-56 items-center">
-          {results?.map(({ links, id, source, title }) => (
+          {results?.entries?.map(({ links, id, source, title }) => (
             <div key={id} className="md:w-2/5 w-full">
               <a href={links?.[0].href} target="_blank" rel="noreferrer" className="hover:underline">
                 <p className="text-lg dark:text-blue-300 text-blue-700">
                   {title}
                 </p>
                 <div className="flex gap-4">
-                  <a href={source?.href} target="_blank" rel="noreferrer">
-                    {source?.href}
-                  </a>
+
                 </div>
               </a>
             </div>
