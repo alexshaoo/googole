@@ -11,7 +11,7 @@ export const Links = () => {
         <Route exact path='/search' element={<Results />} />
       <Route exact path='/imags' element={<Results />} />
       <Route exact path='/news' element={<Results />} />
-      <Route exact path='/videos' element={<Results />} />
+      <Route exact path='/video' element={<Results />} />
         {/* <Route path={['/search', '/image', '/news', '/videos']} element={<Results />} /> */}
       </Routes>
     </div>

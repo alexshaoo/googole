@@ -9,6 +9,7 @@ export const Results = () => {
   const { results, loading, searchTerm, getResults, setSearchTerm } = useResults();
   const location = useLocation();
 
+
   // useEffect(() => {
   //   if (location.search) {
   //     const search = location.search.split('=')[1];
@@ -80,7 +81,8 @@ export const Results = () => {
         <div className="flex flex-wrap">
           {results?.map((video, index) => (
             <div key={index} className="p-2">
-              <ReactPlayer url={video.link} controls width="300px" height="200px" />
+              {console.log(video)}
+              {/* <ReactPlayer url={video.additional_links[0].href} controls width="300px" height="200px" /> */}
             </div>
           ))}
         </div>
