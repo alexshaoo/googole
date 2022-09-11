@@ -5,6 +5,11 @@ import { Loading } from './Loading';
 
 import { useResults } from '../contexts/ResultContext';
 
+// create function to test if given url contains "https://www.youtube.com"
+const isYoutubeLink = (url) => {
+  return url.includes('https://www.youtube.com');
+};
+
 export const Results = () => {
   const { results, loading, searchTerm, getResults, setSearchTerm } = useResults();
   const location = useLocation();
@@ -77,10 +82,13 @@ export const Results = () => {
       )
     case "/video":
       return (
-        <div className="flex flex-wrap">
-          {results?.map((video, index) => (
+        <div className="m-8 grid gap-4 grid-cols-1 grid-rows-3">
+          {results?.filter(video => isYoutubeLink(video.link)).map((video, index) => (
             <div key={index} className="p-2">
-              <ReactPlayer url={video.link} controls width="300px" height="200px" />
+              <p className="text-lg dark:text-blue-300 text-blue-700">
+                {video.title}
+                <ReactPlayer url={video.link} controls width="800px" height="500px" />
+              </p>
             </div>
           ))}
         </div>
