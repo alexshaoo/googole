@@ -35,7 +35,7 @@ export const Results = () => {
       return (
         <div className="flex flex-wrap">
           {results?.map(({ link, title }, index) => (
-            <div key={index} className="md:w-2/5 w-full">
+            <div key={index} className="md:w-2/5 m-2 w-full">
               <a href={link} target="_blank" rel="noreferrer">
                 <p className="text-sm">
                   {link.length > 50 ? `${link.substring(0, 50)}...` : link}
