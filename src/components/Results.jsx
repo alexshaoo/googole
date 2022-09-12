@@ -6,21 +6,13 @@ import { Loading } from './Loading';
 import { useResults } from '../contexts/ResultContext';
 
 // create function to test if given url contains "https://www.youtube.com"
-const isYoutubeLink = (uri) => {
-  return uri.includes('https://www.youtube.com');
-};
+// const isYoutubeLink = (uri) => {
+//   return uri.includes('https://www.youtube.com');
+// };
 
 export const Results = () => {
   const { results, loading, searchTerm, getResults, setSearchTerm } = useResults();
   const location = useLocation();
-
-  // useEffect(() => {
-  //   if (location.search) {
-  //     const search = location.search.split('=')[1];
-  //     setSearchTerm(search);
-  //     getResults(search);
-  //   }
-  // } , [location]);
 
   useEffect(() => {
     if (searchTerm) {
@@ -83,8 +75,9 @@ export const Results = () => {
     case "/video":
       return (
         <div className="m-8 grid gap-4 grid-cols-2 grid-rows-3">
-          {results?.filter(video => isYoutubeLink(video.link)).map((video, index) => (
+          {results?.filter((video) => video.link.indexOf("https://www.youtube.com") > -1).map((video, index) => (
             <div key={index} className="p-2">
+              {/* {console.log(video.link, video.link.indexOf("https://www.youtube.com"))} */}
               <p className="text-lg dark:text-blue-300 text-blue-700">
                 {video.title}
                 <ReactPlayer url={video.link} controls width="600px" height="400px" />
