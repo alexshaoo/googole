@@ -70,24 +70,24 @@ export const Results = () => {
                 <p className="text-lg dark:text-blue-300 text-blue-700">
                   {title}
                 </p>
-                <div className="flex gap-4">
-                  <a href={source?.href} target="_blank" rel="noreferrer">
-                    {source?.href}
-                  </a>
-                </div>
               </a>
+              <div className="flex gap-4">
+                <a href={source?.href} target="_blank" rel="noreferrer">
+                  {source?.href}
+                </a>
+              </div>
             </div>
           ))}
         </div>
       )
     case "/video":
       return (
-        <div className="m-8 grid gap-4 grid-cols-1 grid-rows-3">
+        <div className="m-8 grid gap-4 grid-cols-2 grid-rows-3">
           {results?.filter(video => isYoutubeLink(video.link)).map((video, index) => (
             <div key={index} className="p-2">
               <p className="text-lg dark:text-blue-300 text-blue-700">
                 {video.title}
-                <ReactPlayer url={video.link} controls width="800px" height="500px" />
+                <ReactPlayer url={video.link} controls width="600px" height="400px" />
               </p>
             </div>
           ))}
