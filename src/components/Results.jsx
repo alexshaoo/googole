@@ -6,8 +6,8 @@ import { Loading } from './Loading';
 import { useResults } from '../contexts/ResultContext';
 
 // create function to test if given url contains "https://www.youtube.com"
-const isYoutubeLink = (url) => {
-  return url.includes('https://www.youtube.com');
+const isYoutubeLink = (uri) => {
+  return uri.includes('https://www.youtube.com');
 };
 
 export const Results = () => {
