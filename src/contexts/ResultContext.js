@@ -27,6 +27,7 @@ export const ResultProvider = ({ children }) => {
     if (url.includes("/image")) {
       setResults(data?.image_results);
     } else if (url.includes("/news")) {
+      console.log(data);
       setResults(data?.entries);
     } else {
       setResults(data?.results);
