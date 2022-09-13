@@ -1,5 +1,11 @@
 # googole
-Google clone
+Clone of the very popular Google Search Engine, integrated with https://rapidapi.com/apigeek/api/google-search3 as a backend API.
+
+TODO: 
+- add query options (amount of queries per search, optional parameters)
+- it's so inefficient and slow
+- integrate other apps (discord, youtube, email, spotify)
+
 
 # Getting Started with Create React App
 
