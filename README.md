@@ -1,6 +1,8 @@
 # googole
 Clone of the very popular Google Search Engine, integrated with https://rapidapi.com/apigeek/api/google-search3 as a backend API.
 
+The website can be found <a href="https://alexshaoo-googole.netlify.app/search">here</a>.
+
 TODO: 
 - add query options (amount of queries per search, optional parameters)
 - it's so inefficient and slow
